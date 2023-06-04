@@ -130,6 +130,18 @@ a {
     color: var(--blue);
 }
 
+.menu-blue::after {
+    content: "";
+    position:absolute;
+    bottom: -42px;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--blue);
+}
+
+
 .contact {
     list-style: none;
     display: flex;
@@ -243,6 +255,59 @@ a {
     color: var(--dark-gray);
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    z-index: 1;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--white);
+    color: var(--black);
+    text-transform: none;
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.close-icon {
+    width: 60%;
+}
+
+.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
 /* Pierwszy artykuł sekcji */
 
 .first-section {
@@ -315,6 +380,28 @@ a {
 
 .second-section-list li {
     display: inline-block;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    display: block;
+}
+
+.image-container .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 70px;
+    text-align: center;
 }
 
 .team-info {
@@ -630,4 +717,44 @@ footer {
     line-height: 2;
     letter-spacing: 0.06em;
     margin-bottom: 4px;
+}
+
+/* description to img*/
+.portfolio-img-description {
+    position: relative;
+}
+
+.portfolio-img-description::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(33, 150, 243, 0.9);
+    transition: height 0.25s ease;
+}
+
+.portfolio-img-description:hover::before {
+    height: 100%;
+}
+
+.portfolio-img-description p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    opacity: 0;
+    font-size: 18px;
+    line-height: 1.5555;
+    letter-spacing: 0.03em;
+    text-align: left;
+    transition: opacity 0.25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-img-description:hover p {
+    opacity: 1;
 }

@@ -54,7 +54,17 @@
             <section class="hero">
                 <div class="container">
                     <h1 class="hero-title" >EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-                    <button class="hero-button" type="button">Zamów usługę</button>
+                    <button class="hero-button" type="button" data-modal-open>Zamów usługę</button>
+                    <div class="modal is-hidden" data-modal>
+                        <div class="modal-content">
+                            <button class="modal-close-button" data-modal-close>
+                                <svg class="close-icon">
+                                    <use href="./images/icons.svg#icon-close-black"></use>
+                                </svg>
+                            </button>
+                            <p>Niespodzianka</p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!--artykuły-->
@@ -113,14 +123,17 @@
                 <div class="container">
                 <h2 class="h2-second-section">Czym się zajmujemy</h2>
                 <ul class="second-section-list">
-                    <li>
+                    <li class="image-container">
                 <img alt="mężczyzna pisze kod na klawiaturze" width="370" height="294" src="./images/img1(1).jpg">
+                <p class="label">APLIKACJE KOMPUTEROWE</p>
                     </li>
-                    <li>
+                    <li class="image-container">
                 <img alt="kobieta sprawdza działanie aplikacji" width="370" height="294" src="./images/img2(1).jpg">
+                <p class="label">APLIKACJE KOMPUTEROWE</p>
                     </li>
-                    <li>
+                    <li class="image-container">
                 <img alt="kobieta przeglada palete kolorow na ipadzie" width="370" height="294" src="./images/img3(1).jpg">
+                <p class="label">APLIKACJE KOMPUTEROWE</p>
                     </li>
                 </ul>
             </div>
