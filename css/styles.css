@@ -99,6 +99,7 @@ a {
 .logo:hover,
 .logo-blue:hover {
     color: var(--blue);
+    transition: color 250ms;
 }
 
 .navigation {
@@ -118,11 +119,13 @@ a {
 .menu-blue {
     color: var(--blue);
     text-decoration: none;
+    position: relative;
 }
 
 .menu {
     text-decoration: none;
     color: var(--almost-black);
+    transition: color 250ms;
 }
 
 .menu-blue:hover,
@@ -133,9 +136,9 @@ a {
 .menu-blue::after {
     content: "";
     position:absolute;
-    bottom: -42px;
+    bottom: -33px;
     left: 0;
-    width: 100px;
+    width: 100%;
     height: 4px;
     border-radius: 4px;
     background-color: var(--blue);
@@ -151,7 +154,7 @@ a {
     line-height: 1.14;
     list-style: none;
     letter-spacing: 0.02em;
-    padding: 32px 0 32px 0;
+    padding: 24px 0 24px 0;
     margin-left: auto;
 }
 
@@ -198,6 +201,7 @@ a {
 .mail:hover,
 .tel:hover {
     color: var(--blue);
+    transition: color 250ms;
 }
 
 /* Sekcja główna */
@@ -253,6 +257,7 @@ a {
 
 .hero-button:hover {
     color: var(--dark-gray);
+    transition: color 250ms;
 }
 
 .modal {
@@ -458,6 +463,7 @@ border-radius: 0px 0px 4px 4px;
     display: flex;
     justify-content: center;
     gap: 10px;
+    transition: color 250ms;
 }
 
 .circle {
@@ -468,23 +474,31 @@ border-radius: 0px 0px 4px 4px;
     align-items: center;
     justify-content: center;
     color: var(--social-media);
+    transition: color 250ms;
 }
 
 .circle:hover {
     background-color: var(--blue);
     color: var(--white);
+    transition: color 250ms;
 }
 
 .circle:focus {
     background-color: var(--blue);
     color: var(--white);
+    transition: color 250ms;
 }
 
 .sm-icon {
     fill: currentColor;
 }
 
+
 .circle:hover .sm-icon {
+    fill: var(--white);
+}
+
+.circle:hover .sm-icon-footer {
     fill: var(--white);
 }
 
