@@ -732,7 +732,9 @@ footer {
     gap: 30px;
 }
 
-.portfolio-section-item p {
+
+
+.portfolio-paragraph {
     color: var(--gray);
 }
 
@@ -769,7 +771,7 @@ footer {
     height: 100%;
 }
 
-.portfolio-img-description p {
+.technocrack {
     position: absolute;
     bottom: 0;
     width: 100%;
